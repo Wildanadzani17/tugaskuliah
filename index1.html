@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LATIHAN 3</title>
+		<style type="text/css">
+		.wrapper{
+			border: 0px solid black;
+			width: 980px;
+			margin: 20px auto 20px auto;
+		}
+
+		header{
+			border: 0px solid black;
+			width: 970px;
+			height: 30px;
+			margin: 4px;
+
+		}
+		
+		.logo{
+			float: left;
+			border: 0px solid black;
+			width: 220px;
+			height: 30px;
+			margin: 0px;
+		}
+		form {
+			width:500x;
+			margin:0px auto;
+		}
+		.search {
+			padding:8px 8px;
+			background:rgba(50, 50, 50, 0.2);
+			border:0px solid #dbdbdb;
+		}
+		.button {
+			position:relative;
+			padding:6px 15px;
+			left:-8px;
+			border:2px solid #21BAD1;
+			background-color:#21BAD1;
+			color:#fafafa;
+		}
+		.button:hover  {
+			background-color:#fafafa;
+			color:#207cca;
+		}
+
+		#menu-bar {
+			width: 710px;
+			margin: 0px 0px 0px 0px;
+			height: 31px;
+			line-height: 19px;
+			background: #21BAD1;
+			position:relative;
+		}
+		#menu-bar li {
+			margin: 0px 0px 6px 0px;
+			padding: 0px 0px 0px 10px;
+			float: left;
+			position: relative;
+			list-style: none;
+		}
+		#menu-bar a {
+			font-weight: bold;
+			font-family: arial;
+			font-style: normal;
+			font-size: 13px;
+			color: #FFFFFF;
+			text-decoration: none;
+			display: block;
+			padding: 6px 15px 6px 21px;
+			margin: 0;
+		}
+		#menu-bar li ul li a {
+			margin: 0;
+		}
+		#menu-bar .active a, #menu-bar li:hover > a {
+			background: #D9D9D9;
+			color: #404040;
+		}
+		#menu-bar ul {
+			background: #DDDDDD;
+			background: linear-gradient(top,  #FFFFFF,  #CFCFCF);
+			background: -ms-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+			background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
+			background: -moz-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+			display: none;
+			width: 150px;
+			position: absolute;
+			top: 30px;
+			border: solid 1px #B4B4B4;
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+		}
+		#menu-bar {
+			display: inline-block;
+		}
+		html[xmlns] 
+		#menu-bar {
+			display: block;
+		}
+		* html 
+		#menu-bar {
+			height: 1%;
+		}
+		
+		.banner{
+			border: 0px solid black;
+			width: 970px;
+			height: 205px;
+			margin: 4px;
+		}
+
+		.banner img{
+			width: 970px;
+			height: 205px;
+		}
+		
+		.image{
+			float: left;
+			border: 0px solid black;
+			width: 100px;
+			height: 100px;
+			margin: 3px;
+		}
+
+		.image img{
+			width: 100px;
+			height: 100px;
+		}
+		
+		.berita{
+			float: left;
+			border: 0px solid black;
+			background-color: #D9D9D9;
+			width: 650px;
+			height: 450px;
+			margin: 4px;
+		}
+		aside{
+			float: left;
+			border: 0px solid black;
+			background-color: #D9D9D9;
+			width: 310px;
+			height: 450px;
+			margin: 4px;
+		}
+		
+		footer{
+			clear: both;
+			border: 0px solid black;
+			width: 970px;
+			height: 205px;
+			margin: 4px;
+		}
+		body{
+	font-family: arial, verdana, sans-serif;
+}
+/* jwpopup box style */
+.jwpopup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 110px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
+}
+.jwpopup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    max-width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.jwpopup-head {
+	font-size: 11px;
+    padding: 1px 16px;
+    color: white;
+    background: #006faa; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#006faa, #002c44); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#006faa, #002c44); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#006faa, #002c44); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#006faa, #002c44); /* Standard syntax */
+}
+.jwpopup-main {padding: 5px 16px;}
+.jwpopup-foot {
+	font-size: 12px;
+    padding: .5px 16px;
+    color: #ffffff;
+    background: #006faa; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#006faa, #002c44); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#006faa, #002c44); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#006faa, #002c44); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#006faa, #002c44); /* Standard syntax */
+}
+
+/* tambahkan efek animasi */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* style untuk tombol close */
+.close {
+	margin-top: 7px;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: #999999;
+    text-decoration: none;
+    cursor: pointer;
+}
+		</style>
+	</head>
+	<body>
+		<!-- Wrapper -->
+		<div class="wrapper">
+			<!-- Header -->
+			<header>
+				<!-- Logo -->
+				<div class="logo">
+					<form>
+						<input class="search" type="text" placeholder="Cari..." required>	
+						<input class="button" type="button" value="Cari">		
+					</form>
+				</div>
+
+				<!-- Navbar -->
+				<nav>
+					<ul id="menu-bar">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="javascript:void(0);" id="jwpopupLink">Products</a></li>
+						<!-- jwpopup box -->
+<div id="jwpopupBox" class="jwpopup">
+	<!-- jwpopup content -->
+	<div class="jwpopup-content">
+		<div class="jwpopup-head">
+			<span class="close">×</span>
+			<h2>[Popup Header] Popup dengan Javascript dan CSS</h2>
+		</div>
+		<div class="jwpopup-main">
+			<p>[Popup Content] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis maxime nobis quod veritatis facere velit cum optio obcaecati soluta ratione amet iusto nulla, expedita blanditiis tempora inventore tempore impedit itaque.</p>
+		</div>
+		<div class="jwpopup-foot">
+			<p>[Popup Footer] Creating popup using Javascript and CSS</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	
+// untuk mendapatkan jwpopup
+var jwpopup = document.getElementById('jwpopupBox');
+
+// untuk mendapatkan link untuk membuka jwpopup
+var mpLink = document.getElementById("jwpopupLink");
+
+// untuk mendapatkan aksi elemen close
+var close = document.getElementsByClassName("close")[0];
+
+// membuka jwpopup ketika link di klik
+mpLink.onclick = function() {
+    jwpopup.style.display = "block";
+}
+
+// membuka jwpopup ketika elemen di klik
+close.onclick = function() {
+    jwpopup.style.display = "none";
+}
+
+// membuka jwpopup ketika user melakukan klik diluar area popup
+window.onclick = function(event) {
+    if (event.target == jwpopup) {
+        jwpopup.style.display = "none";
+    }
+}
+
+</script>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<!-- End Navbar -->
+				<!-- End Logo -->
+			</header>
+			<!-- End Header-->
+
+			<!-- Banner -->
+			<div class="banner">
+				<img src="images/banner.png">
+			</div>
+			<!-- End Banner -->
+
+			<!-- Berita -->
+			<div class="berita">
+				<article>
+					<div class="image">
+						<img src="images/1.png">
+					</div>
+					<h2><a href="">Judul Berita Pertama</a></h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget finibus augue. Sed volutpat egestas lorem, ut interdum odio fermentum eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse volutpat justo sed ipsum efficitur ultrices. Donec a ante metus
+					</p>
+				</article>
+				<article>
+					<div class="image">
+						<img src="images/2.png">
+					</div>
+					<h2><a href="">Judul Berita Kedua</a></h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget finibus augue. Sed volutpat egestas lorem, ut interdum odio fermentum eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse volutpat justo sed ipsum efficitur ultrices. Donec a ante metus
+					</p>
+				</article>
+			</div>
+			<!-- End Berita -->
+
+			<!-- Sidebar -->
+			<aside>
+				<div class="login">
+					<input type="text" placeholder="Username" id="username">  
+					<input type="password" placeholder="password" id="password">  
+					<input type="submit" value="Sign In">
+				</div>
+<div class="shadow"></div>
+
+			</aside>
+			<!-- End Sidebar -->
+
+			<!--Footer-->
+			<footer>
+					<img src="images/footer.png">
+			</footer>
+			<!--Footer-->
+		</div>
+		<!-- End Wrapper -->
+	</body>
+</html>
